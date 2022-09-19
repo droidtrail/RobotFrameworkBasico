@@ -11,8 +11,8 @@ Caso de teste 01 - Acesso ao menu "Eletrônicos"
     [Tags]             menus    categorias
     Acessar a home page do site Amazon.com.br
     Entrar no menu "Venda na Amazon"
-    Verificar se aparece a frase "Comece a vender na Amazon"
-    # Verificar se o título da página fica "Eletrônicos e Tecnologia | Amazon.com.br"
+    Verificar se aparece a frase "Mais Vendidos em Eletrônicos"
+    Verificar se o título da página fica "Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon"
     # Verificar se aparece a categoria "Computadores e Informática"
 
 Caso de teste 02 - Pesquisa de Produto

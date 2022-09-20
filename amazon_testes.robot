@@ -13,7 +13,7 @@ Caso de teste 01 - Acesso ao menu "Eletrônicos"
     Entrar no menu "Venda na Amazon"
     Verificar se aparece a frase "Mais Vendidos em Eletrônicos"
     Verificar se o título da página fica "Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon"
-    # Verificar se aparece a categoria "Computadores e Informática"
+    Verificar se aparece a categoria "Mais Vendidos em Esporte"
 
 Caso de teste 02 - Pesquisa de Produto
     [Documentation]    Esse teste verifica a busca de um produto

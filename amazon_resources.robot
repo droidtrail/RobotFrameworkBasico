@@ -30,3 +30,7 @@ Verificar se aparece a frase "${FRASE}"
 
 Verificar se o título da página fica "${TITULO}"
     Title Should Be    title=${TITULO}  
+
+Verificar se aparece a categoria "${NOME_CATEGORIA}"
+    Element Should Be Visible    locator=//h2[contains(.,'${NOME_CATEGORIA}')]
+    

@@ -1,8 +1,10 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    RequestsLibrary
+Library    OperatingSystem
 
 *** Variables ***
+${BROWSER}                      chrome
 ${URL}                          https://www.amazon.com.br/
 ${MENU_MAIS_VENDIDOS}           //a[@data-csa-c-slot-id='nav_cs_1']
 ${HEADER_COMO_VENDAR}           //h2[contains(.,'Mais Vendidos em Eletrônicos')]
@@ -11,7 +13,7 @@ ${TEXTO_HEADER_COMO_VENDAR}     Mais Vendidos em Eletrônicos
 
 *** Keywords ***
 Abrir o navegador
-    Open Browser    browser=chrome
+    Open Browser    browser=${BROWSER}
     Maximize Browser Window
 
 Fechar o navegador

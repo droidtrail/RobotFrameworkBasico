@@ -1,0 +1,5 @@
+robot --help
+robot -i menus .\amazon_testes.robot (Executa o teste da tag menu)
+robot -e menus .\amazon_testes.robot (roda todos os testes exceto o da tag menus)
+robot -d resultados .\amazon_testes.robot (move os prints para a pasta resultados)
+robot -v BROWSER:firefox -i menus -d resultados .\amazon_testes.robot (Executa o teste em outro navegador passado por parametro)

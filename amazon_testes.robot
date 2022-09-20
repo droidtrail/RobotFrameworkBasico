@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    Essa suite testa o site da Amazon.com.br
 Resource         amazon_resources.robot
+# Suite Setup      Remove Files    ./resultados/*.png
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 

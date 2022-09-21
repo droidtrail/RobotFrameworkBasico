@@ -15,9 +15,9 @@ Caso de teste 01 - Acesso ao menu "Eletrônicos"
     Então o título da página deve ficar "Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon"
     # E o texto "Mais Vendidos em Esporte" deve ser exibido na página
     
-Caso de teste 02 - Pesquisa de Produto
-    [Documentation]    Esse teste verifica a busca de um produto
-    [Tags]             busca_produtos    lista_busca
+# Caso de teste 02 - Pesquisa de Produto
+#     [Documentation]    Esse teste verifica a busca de um produto
+#     [Tags]             busca_produtos    lista_busca
 
 
     

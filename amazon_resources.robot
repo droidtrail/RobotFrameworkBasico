@@ -6,7 +6,7 @@ Library    OperatingSystem
 *** Variables ***
 ${BROWSER}                      chrome
 ${URL}                          https://www.amazon.com.br/
-${MENU_MAIS_VENDIDOS}           //a[@data-csa-c-slot-id='nav_cs_1']
+${MENU_MAIS_VENDIDOS}           //a[contains(@data-csa-c-content-id,'bestsellers')]
 ${HEADER_COMO_VENDAR}           //h2[contains(.,'Mais Vendidos em Eletrônicos')]
 ${TEXTO_HEADER_COMO_VENDAR}     Mais Vendidos em Eletrônicos        
 
@@ -18,7 +18,7 @@ Abrir o navegador
 
 Fechar o navegador
     Capture Page Screenshot
-    Close Browser
+    # Close Browser
     
 Acessar a home page do site Amazon.com.br
     Go To                            url=${URL}
@@ -49,6 +49,7 @@ Verificar o resultado da pesquisa se está listando o produto ${PRODUTO}
     Wait Until Element Is Visible    locator=//span[@class='a-size-base a-color-base a-text-normal'][contains(.,${PRODUTO})]
     
 #######################GHERKIN STEPS###########################
+# Caso de teste 01 - Acesso ao menu "Eletrônicos"
 Dado que eu estou na home page da Amazon.com.br
     Acessar a home page do site Amazon.com.br
 
@@ -56,4 +57,10 @@ Quando acessar o menu "Venda na Amazon"
     Entrar no menu "Venda na Amazon"
 
 Então o título da página deve ficar "Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon"
-    Verificar se o título da página fica "${TITULO}"
+    Verificar se o título da página fica "Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon"
+
+E o texto "Mais Vendidos em Eletrônicos" deve ser exibido na página
+    Verificar se aparece a frase "Mais Vendidos em Eletrônicos"
+
+E a categoria "Mais Vendidos em Esporte" deve ser exibida na página    
+    Verificar se aparece a categoria "Mais Vendidos em Esporte"

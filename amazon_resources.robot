@@ -48,3 +48,12 @@ Clicar no botão de pesquisa
 Verificar o resultado da pesquisa se está listando o produto ${PRODUTO}
     Wait Until Element Is Visible    locator=//span[@class='a-size-base a-color-base a-text-normal'][contains(.,${PRODUTO})]
     
+#######################GHERKIN STEPS###########################
+Dado que eu estou na home page da Amazon.com.br
+    Acessar a home page do site Amazon.com.br
+
+Quando acessar o menu "Venda na Amazon"
+    Entrar no menu "Venda na Amazon"
+
+Então o título da página deve ficar "Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon"
+    Verificar se o título da página fica "${TITULO}"

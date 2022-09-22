@@ -18,12 +18,14 @@ Abrir o navegador
 
 Fechar o navegador
     Capture Page Screenshot
-    # Close Browser
+    Close Browser
     
 Acessar a home page do site Amazon.com.br
     Go To                            url=${URL}
     Wait Until Element Is Visible    locator=${MENU_MAIS_VENDIDOS}
 
+#######################Teste Procedural###########################
+#Caso de teste 01 - Acesso ao menu "Eletrônicos"
 Entrar no menu "Venda na Amazon"
     Click Element   locator=${MENU_MAIS_VENDIDOS}
 
@@ -49,7 +51,7 @@ Verificar o resultado da pesquisa se está listando o produto ${PRODUTO}
     Wait Until Element Is Visible    locator=//span[@class='a-size-base a-color-base a-text-normal'][contains(.,${PRODUTO})]
     
 #######################GHERKIN STEPS###########################
-# Caso de teste 01 - Acesso ao menu "Eletrônicos"
+################ Caso de teste 01 - Acesso ao menu "Eletrônicos"
 Dado que eu estou na home page da Amazon.com.br
     Acessar a home page do site Amazon.com.br
 
@@ -64,3 +66,17 @@ E o texto "Mais Vendidos em Eletrônicos" deve ser exibido na página
 
 E a categoria "Mais Vendidos em Esporte" deve ser exibida na página    
     Verificar se aparece a categoria "Mais Vendidos em Esporte"
+
+E o texto "Mais Vendidos em Esporte" deve ser exibido na página
+    Verificar se aparece a categoria "Mais Vendidos em Esporte"
+
+#############################Caso de teste 02 - Pesquisa de Produto
+Quando eu pesquisar pelo produto "Xbox Series S"
+   Digitar o nome de produto "Xbox Series S" no campo de pesquisa
+
+Então o título da página deve ficar "Xbox Series S"
+    Clicar no botão de pesquisa
+
+E um produto da linha "Xbox Series S" deve ser mostrado na página
+    Verificar o resultado da pesquisa se está listando o produto "Xbox Series S"
+    

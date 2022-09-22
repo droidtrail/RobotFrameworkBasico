@@ -18,7 +18,7 @@ Abrir o navegador
 
 Fechar o navegador
     Capture Page Screenshot
-    Close Browser
+    # Close Browser
     
 Acessar a home page do site Amazon.com.br
     Go To                            url=${URL}
@@ -49,8 +49,17 @@ Clicar no botão de pesquisa
     
 Verificar o resultado da pesquisa se está listando o produto ${PRODUTO}
     Wait Until Element Is Visible    locator=//span[@class='a-size-base a-color-base a-text-normal'][contains(.,${PRODUTO})]
-    
-#######################GHERKIN STEPS###########################
+
+#Caso de Teste 03 - Adicionar Produto no Carrinho
+Adicionar o produto "Console Xbox Series S" no carrinho
+    Click Element    locator=//span[@class='a-size-base a-color-base a-text-normal'][contains(.,'Console Xbox Series S')]
+    Click Element    locator=//input[@value='Adicionar ao carrinho']
+
+Adicionar o produto "Console Xbox Series S" no carrinho
+    Wait Until Element Is Visible    locator=//span[contains(.,'Adicionado ao carrinho')]
+    # Element Should Be Visible        locator=//span[contains(.,'Adicionado ao carrinho')]
+
+#####################################################GHERKIN STEPS#######################################################################
 ################ Caso de teste 01 - Acesso ao menu "Eletrônicos"
 Dado que eu estou na home page da Amazon.com.br
     Acessar a home page do site Amazon.com.br

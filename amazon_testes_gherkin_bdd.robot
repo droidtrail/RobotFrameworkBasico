@@ -24,6 +24,8 @@ Caso de teste 02 - Pesquisa de Produto
     Então o título da página deve ficar "Xbox Series S"
     E um produto da linha "Xbox Series S" deve ser mostrado na página
 
+    
+
 
 
 

@@ -14,6 +14,7 @@ Buscar um livro específico - Get por id
     Requisitar o livro "15"
     Conferir o status code    200
     Conferir o reason    OK
+    Conferir se retorna todos os dados corretos do livro 15
     
 
     

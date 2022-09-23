@@ -24,7 +24,14 @@ Requisitar o livro "${ID_LIVRO}"
     Log    ${RESPOSTA.text} 
     Set Test Variable    ${RESPOSTA}
 
-################################ Conferências #########################################
+Cadastrar um novo livro
+    ${HEADERS}     Create Dictionary    content-type=application/json
+    ${RESPOSTA}    POST On Session    fakeAPI    Books
+    ...                            data={"id": 0,"title": "string","description": "string","pageCount": 0,"excerpt": "string","publishDate": "2022-09-23T17:19:16.06Z"}
+    ...                            headers=${HEADERS}
+    Log                            ${RESPOSTA.text} 
+    Set Test Variable              ${RESPOSTA}
+#######################################Conferências############################################
 Conferir o status code
     [Arguments]    ${STATUSCODE_DESEJADO}
     Should Be Equal As Strings    ${RESPOSTA.status_code}     ${STATUSCODE_DESEJADO}

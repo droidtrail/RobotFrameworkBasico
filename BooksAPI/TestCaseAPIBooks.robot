@@ -15,6 +15,11 @@ Buscar um livro específico - Get por id
     Conferir o status code    200
     Conferir o reason    OK
     Conferir se retorna todos os dados corretos do livro 15
+
+Cadastrar um novo livro (POST)
+    Cadastrar um novo livro
+    Conferir o status code    200
+    Conferir o reason    OK
     
 
     

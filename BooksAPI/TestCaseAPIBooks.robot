@@ -3,6 +3,19 @@ Documentation  Documentação da API: https://fakerestapi.azurewebsites.net/inde
 Resource    ResourceAPI.robot
 Suite Setup    Conectar a minha API
 *** Test Cases ***
-Buscar a listagem de todos os livros
+
+Buscar a listagem de todos os livros - Get em livros
     Requisitar todos os livros
+    Conferir o status code    200
+    Conferir o reason    OK
+    Conferir se retorna uma lista com "200" livros
+
+Buscar um livro específico - Get por id
+    Requisitar o livro "15"
+    Conferir o status code    200
+    Conferir o reason    OK
+    
+
+    
+    
 
